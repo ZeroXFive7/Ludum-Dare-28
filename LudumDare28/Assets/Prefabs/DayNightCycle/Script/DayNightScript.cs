@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class DayNightScript : MonoBehaviour
 {
     public Color MorningColor;
@@ -32,6 +33,9 @@ public class DayNightScript : MonoBehaviour
             return DayLengthInSeconds - SecondsElapsed;
         }
     }
+
+    public Vector2 SunDirection = Vector2.right;
+    private Vector2 defaultSunDirection = Vector2.right;
 
     private SpriteRenderer spriteRenderer;
 
@@ -82,7 +86,8 @@ public class DayNightScript : MonoBehaviour
         }
 
         float timeOfDay = SecondsElapsed / DayLengthInSeconds;
-        
+        SunDirection = Quaternion.Euler(0.0f, 0.0f, timeOfDay * 360.0f) * defaultSunDirection;
+
         int timeIndex = 0;
         while (timeIndex < numTimesOfDay && timeOfDay > times[timeIndex + 1])
         {
