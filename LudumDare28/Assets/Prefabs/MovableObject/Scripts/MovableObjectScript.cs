@@ -8,6 +8,11 @@ public class MovableObjectScript : MonoBehaviour {
     private Vector2 movement;
     private bool pressI = false;
     private bool lockMovement = false;
+    public float x = 750.0f;
+    public float y = 375.0f;
+    public Texture2D flower;
+
+    private InventoryScript inventory = new InventoryScript();
 
     // Use this for initialization
 	void Start () {
@@ -54,6 +59,10 @@ public class MovableObjectScript : MonoBehaviour {
             {
                 if (item.pickedUp && pressI)
                 {
+                    // Add item to your inventory
+                    inventory.insertItem(InventoryScript.ITEMS.FLOWER);
+
+                    // Now destroy the item so it dissapears from the world
                     Destroy(item);
                     Destroy(collider.transform.parent.gameObject);
                     lockMovement = false;
@@ -110,7 +119,21 @@ public class MovableObjectScript : MonoBehaviour {
 
         // Movement per direction
         movement = new Vector2(objectSpeed.x * inputX, objectSpeed.y * inputY);
+    }
 
-       
+    void OnGUI()
+    {
+        if (inventory.getItems().Count > 0)
+        {
+            ArrayList items = inventory.getItems();
+            for (int i = 0; i < items.Count*50; i+=50)
+            {
+                if ((InventoryScript.ITEMS)items[i / 50] == InventoryScript.ITEMS.FLOWER)
+                {
+                    GUI.backgroundColor = Color.gray;
+                    GUI.Box(new Rect(x + i, y, 50f, 50.0f), flower);
+                }
+            }
+        }
     }
 }

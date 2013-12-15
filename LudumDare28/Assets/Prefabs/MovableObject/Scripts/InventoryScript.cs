@@ -3,12 +3,8 @@ using System.Collections;
 
 public class InventoryScript : MonoBehaviour {
 
-
-
-
-
-
-
+    private ArrayList items = new ArrayList();
+    public enum ITEMS { FLOWER };
 	// Use this for initialization
 	void Start () {
 	
@@ -18,4 +14,14 @@ public class InventoryScript : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    public void insertItem(ITEMS item)
+    {
+        items.Add(item);
+    }
+
+    public ArrayList getItems()
+    {
+        return items;
+    }
 }
