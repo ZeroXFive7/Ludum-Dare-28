@@ -6,7 +6,7 @@ public class MovableObjectScript : MonoBehaviour {
     public Vector2 objectSpeed = new Vector2(20, 20);
     public float objectDrag = 25.0f;
     private Vector2 movement;
-    private bool pressA = false;
+    private bool pressI = false;
 
     // Use this for initialization
 	void Start () {
@@ -37,11 +37,10 @@ public class MovableObjectScript : MonoBehaviour {
 
             if (npc != null)
             {
-                // Avoid friendly fire
-                if (pressA)
+                if (pressI)
                 {
                     npc.continueConversation();
-                    pressA = false;
+                    pressI = false;
                 }
             }
         }
@@ -71,6 +70,6 @@ public class MovableObjectScript : MonoBehaviour {
         // Movement per direction
         movement = new Vector2(objectSpeed.x * inputX, objectSpeed.y * inputY);
 
-        pressA = Input.GetKeyUp(KeyCode.I);
+        pressI = Input.GetKeyUp(KeyCode.I);
     }
 }

@@ -8,7 +8,7 @@ public class NPCCharacterScript : MonoBehaviour {
     private Vector2 movement;
     private bool inConversation = false;
     private ArrayList conversationPieces = new ArrayList();
-    private int conversationPlace = 0;
+    private int conversationPlace = -1; // so it's incremented to the beginning of the conversation at first.
 
     // Use this for initialization
     void Start()
@@ -46,21 +46,26 @@ public class NPCCharacterScript : MonoBehaviour {
     public void continueConversation()
     {
         inConversation = true;
+        conversationPlace++;
+
+        if (conversationPlace >= conversationPieces.Count)
+        {
+            leaveConversation();
+        }
+        
     }
 
     public void leaveConversation()
     {
         inConversation = false;
+        conversationPlace = -1;
     }
 
     void OnGUI()
     {
         if (inConversation)
         {
-            GUI.Label(new Rect(25, 25, 1000, 100), (string) conversationPieces[conversationPlace]);
-            conversationPlace++;
-            conversationPlace %= conversationPieces.Count;
-            //inConversation = false;
+            GUI.Label(new Rect(25, 25, 1000, 100), (string) conversationPieces[conversationPlace]); 
         }
     }
 }
