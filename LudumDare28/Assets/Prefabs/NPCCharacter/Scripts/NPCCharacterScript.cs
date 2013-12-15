@@ -16,11 +16,11 @@ public class NPCCharacterScript : MonoBehaviour {
     void Update()
     {
         // Retrieve axis information
-        float inputX = Input.GetAxis("Horizontal");
-        float inputY = Input.GetAxis("Vertical");
+        //float inputX = Input.GetAxis("Horizontal");
+        //float inputY = Input.GetAxis("Vertical");
 
         // Movement per direction
-        movement = new Vector2(objectSpeed.x * inputX, objectSpeed.y * inputY);
+        //movement = new Vector2(objectSpeed.x * inputX, objectSpeed.y * inputY);
     }
 
     /*
@@ -31,5 +31,10 @@ public class NPCCharacterScript : MonoBehaviour {
         // Move the game object
         rigidbody2D.drag = objectDrag;
         rigidbody2D.velocity = movement;
+    }
+
+    public string getConversation()
+    {
+        return "Hello, I'm an NPC!";
     }
 }
