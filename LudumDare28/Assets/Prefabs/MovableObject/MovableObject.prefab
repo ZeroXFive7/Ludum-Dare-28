@@ -144,7 +144,7 @@ MonoBehaviour:
   objectSpeed: {x: 20, y: 20}
   objectDrag: 30
   x: 750
-  y: 390
+  y: 375
   flower: {fileID: 2800000, guid: f804f2dcae714f24ea63053c3dca1234, type: 3}
 --- !u!124 &12400000
 Behaviour:

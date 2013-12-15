@@ -14,7 +14,7 @@ GameObject:
   - 50: {fileID: 5000000}
   m_Layer: 0
   m_Name: NPCCharacter
-  m_TagString: NPC
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +30,7 @@ GameObject:
   - 61: {fileID: 6100002}
   m_Layer: 0
   m_Name: NPCTrigger
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

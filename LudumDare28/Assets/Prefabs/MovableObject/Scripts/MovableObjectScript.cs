@@ -22,6 +22,8 @@ public class MovableObjectScript : MonoBehaviour {
     void Update()
     {
         getInput();
+
+        changeScenes();
     }
 
     /*
@@ -134,6 +136,15 @@ public class MovableObjectScript : MonoBehaviour {
                     GUI.Box(new Rect(x + i, y, 50f, 50.0f), flower);
                 }
             }
+        }
+    }
+
+    private void changeScenes()
+    {
+        if (transform.position.x < -5)
+        {
+            Application.LoadLevel("MaxSceneSecond");
+            
         }
     }
 }
