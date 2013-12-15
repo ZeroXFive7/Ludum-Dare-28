@@ -65,6 +65,7 @@ public class NPCCharacterScript : MonoBehaviour {
     {
         if (inConversation)
         {
+            GUI.contentColor = Color.black;
             GUI.Label(new Rect(25, 25, 1000, 100), (string) conversationPieces[conversationPlace]); 
         }
     }
