@@ -7,6 +7,7 @@ public class MovableObjectScript : MonoBehaviour {
     public float objectDrag = 25.0f;
     private Vector2 movement;
     private bool pressI = false;
+    private bool lockMovement = false;
 
     // Use this for initialization
 	void Start () {
@@ -44,6 +45,27 @@ public class MovableObjectScript : MonoBehaviour {
                 }
             }
         }
+        else if (collider.tag == "Item")
+        {
+            BoxCollider2D boxCollider = collider.gameObject.GetComponent<BoxCollider2D>();
+            InteractableItemScript item = boxCollider.transform.parent.gameObject.GetComponent<InteractableItemScript>();
+            
+            if (item != null)
+            {
+                if (item.pickedUp && pressI)
+                {
+                    Destroy(item);
+                    Destroy(collider.transform.parent.gameObject);
+                    lockMovement = false;
+                }
+                else if (pressI)
+                {
+                    item.beingPickedUp = true;
+                    lockMovement = true;
+                }
+               
+            }
+        }
     }
 
     void OnTriggerExit2D(Collider2D collider)
@@ -59,10 +81,29 @@ public class MovableObjectScript : MonoBehaviour {
                 npc.leaveConversation();
             }
         }
+        else if (collider.tag == "Item")
+        {
+            BoxCollider2D boxCollider = collider.gameObject.GetComponent<BoxCollider2D>();
+            InteractableItemScript item = boxCollider.transform.parent.gameObject.GetComponent<InteractableItemScript>();
+
+            if (item != null)
+            {
+                if (item.pickedUp)
+                {
+                    item.beingPickedUp = false;
+                    lockMovement = false;
+                }
+            }
+        }
     }
 
     private void getInput()
     {
+        pressI = Input.GetKeyUp(KeyCode.I);
+
+        if (lockMovement)
+            return;
+        
         // Retrieve axis information
         float inputX = Input.GetAxis("Horizontal");
         float inputY = Input.GetAxis("Vertical");
@@ -70,6 +111,6 @@ public class MovableObjectScript : MonoBehaviour {
         // Movement per direction
         movement = new Vector2(objectSpeed.x * inputX, objectSpeed.y * inputY);
 
-        pressI = Input.GetKeyUp(KeyCode.I);
+       
     }
 }
