@@ -40,8 +40,24 @@ public class MovableObjectScript : MonoBehaviour {
                 // Avoid friendly fire
                 if (pressA)
                 {
-                    Debug.Log(npc.getConversation());
+                    npc.continueConversation();
+                    pressA = false;
                 }
+            }
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collider)
+    {
+        if (collider.tag == "NPC")
+        {
+            BoxCollider2D boxCollider = collider.gameObject.GetComponent<BoxCollider2D>();
+            NPCCharacterScript npc = boxCollider.transform.parent.gameObject.GetComponent<NPCCharacterScript>();
+
+            if (npc != null)
+            {
+                // Leave the conversation if needed
+                npc.leaveConversation();
             }
         }
     }
@@ -55,6 +71,6 @@ public class MovableObjectScript : MonoBehaviour {
         // Movement per direction
         movement = new Vector2(objectSpeed.x * inputX, objectSpeed.y * inputY);
 
-        pressA = Input.GetKey(KeyCode.I);
+        pressA = Input.GetKeyUp(KeyCode.I);
     }
 }

@@ -6,11 +6,16 @@ public class NPCCharacterScript : MonoBehaviour {
     public Vector2 objectSpeed = new Vector2(20, 20);
     public float objectDrag = 25.0f;
     private Vector2 movement;
+    private bool inConversation = false;
+    private ArrayList conversationPieces = new ArrayList();
+    private int conversationPlace = 0;
 
     // Use this for initialization
     void Start()
     {
-
+        conversationPieces.Add("Hello, I'm an NPC");
+        conversationPieces.Add("I think Max, Jake, and Josh are awesome!");
+        conversationPieces.Add("I also hate people. Go away!");
     }
 
     void Update()
@@ -19,8 +24,8 @@ public class NPCCharacterScript : MonoBehaviour {
         //float inputX = Input.GetAxis("Horizontal");
         //float inputY = Input.GetAxis("Vertical");
 
-        // Movement per direction
-        //movement = new Vector2(objectSpeed.x * inputX, objectSpeed.y * inputY);
+        // Movement per direction. NPC won't move right now.
+        movement = new Vector2(0.0f, 0.0f);
     }
 
     /*
@@ -28,13 +33,34 @@ public class NPCCharacterScript : MonoBehaviour {
      */
     void FixedUpdate()
     {
-        // Move the game object
+        // This keeps the object from having mementum
         rigidbody2D.drag = objectDrag;
         rigidbody2D.velocity = movement;
     }
 
-    public string getConversation()
+    public void setConversation(ArrayList conversation)
     {
-        return "Hello, I'm an NPC!";
+        conversationPieces = conversation;
+    }
+
+    public void continueConversation()
+    {
+        inConversation = true;
+    }
+
+    public void leaveConversation()
+    {
+        inConversation = false;
+    }
+
+    void OnGUI()
+    {
+        if (inConversation)
+        {
+            GUI.Label(new Rect(25, 25, 1000, 100), (string) conversationPieces[conversationPlace]);
+            conversationPlace++;
+            conversationPlace %= conversationPieces.Count;
+            //inConversation = false;
+        }
     }
 }
