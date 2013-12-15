@@ -152,7 +152,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300000, guid: 2543f86565f7f1a40912596bc6aaa5c5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -218,7 +218,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300000, guid: ee440d94e4e72db48b57e98021796428, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -276,6 +276,82 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectSpeed: {x: 20, y: 20}
   objectDrag: 30
+--- !u!1 &182237328
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+  m_PrefabInternal: {fileID: 2098151687}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 182237330}
+  - 114: {fileID: 182237329}
+  - 212: {fileID: 182237331}
+  m_Layer: 8
+  m_Name: DayNightCycle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &182237329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be,
+    type: 2}
+  m_PrefabInternal: {fileID: 2098151687}
+  m_GameObject: {fileID: 182237328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcdf733a6e1507047b2e027e8967f4ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MorningColor: {r: .933823526, g: .571280301, b: .336451113, a: .368627459}
+  MorningTime: 0
+  MiddayColor: {r: 1, g: 1, b: 1, a: .509803951}
+  MiddayTime: .170000002
+  AfternoonColor: {r: .934155405, g: .992647052, b: .386840403, a: .443137258}
+  AfternoonTime: .340000004
+  EveningColor: {r: .558638632, g: .305038959, b: .669117689, a: .494117647}
+  EveningTime: .50999999
+  NightColor: {r: .117647052, g: .117647052, b: .117647052, a: .674509823}
+  NightTime: .680000007
+  MidnightColor: {r: .0428741239, g: .21352908, b: .448529422, a: .749019623}
+  MidnightTime: .850000024
+  DayLengthInSeconds: 600
+--- !u!4 &182237330
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+  m_PrefabInternal: {fileID: 2098151687}
+  m_GameObject: {fileID: 182237328}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!212 &182237331
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 182237328}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &363935680
 Prefab:
   m_ObjectHideFlags: 0
@@ -314,6 +390,10 @@ Prefab:
     - target: {fileID: 100000, guid: cba3e8f7bd6ebc942a46e1b200361723, type: 2}
       propertyPath: m_Name
       value: MovableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: cba3e8f7bd6ebc942a46e1b200361723, type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cba3e8f7bd6ebc942a46e1b200361723, type: 2}
@@ -449,7 +529,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -515,6 +595,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: 09d30e6cab051834da5072573afe864e, type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 09d30e6cab051834da5072573afe864e, type: 2}
   m_RootGameObject: {fileID: 87035120}
@@ -566,7 +650,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300000, guid: ee440d94e4e72db48b57e98021796428, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -623,3 +707,131 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!1001 &2098151687
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: NightColor.a
+      value: .674509823
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: EveningColor.a
+      value: .494117647
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: AfternoonColor.a
+      value: .443137258
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: MiddayColor.a
+      value: .509803951
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: MorningColor.a
+      value: .368627459
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: NightColor.r
+      value: .117647052
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: NightColor.g
+      value: .117647052
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: NightColor.b
+      value: .117647052
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: DayLengthInSeconds
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: AfternoonTime
+      value: .340000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: EveningTime
+      value: .50999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: NightTime
+      value: .680000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: MiddayTime
+      value: .170000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: EveningColor.r
+      value: .558638632
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: EveningColor.g
+      value: .305038959
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: EveningColor.b
+      value: .669117689
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: MidnightColor.r
+      value: .0428741239
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: MidnightColor.g
+      value: .21352908
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: MidnightColor.b
+      value: .448529422
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: MidnightTime
+      value: .850000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+      propertyPath: MidnightColor.a
+      value: .749019623
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8870330b4ba8ab64c9cf8dac9b00b4be, type: 2}
+  m_RootGameObject: {fileID: 182237328}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1

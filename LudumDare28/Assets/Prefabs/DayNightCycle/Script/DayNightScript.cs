@@ -19,6 +19,9 @@ public class DayNightScript : MonoBehaviour
     public Color NightColor;
     public float NightTime = 0.8f;
 
+    public Color MidnightColor;
+    public float MidnightTime = 0.9f;
+
     public float DayLengthInSeconds = 50.0f;
     public float SecondsElapsed { get; private set; }
     
@@ -30,10 +33,12 @@ public class DayNightScript : MonoBehaviour
         }
     }
 
+    private SpriteRenderer spriteRenderer;
+
     private Texture2D overlayTexture;
     private bool hasStarted = false;
 
-    private int numTimesOfDay = 5;
+    private int numTimesOfDay = 6;
     private Color[] colors;
     private float[] times;
 
@@ -49,7 +54,8 @@ public class DayNightScript : MonoBehaviour
         colors[2] = AfternoonColor;
         colors[3] = EveningColor;
         colors[4] = NightColor;
-        colors[5] = MorningColor;
+        colors[5] = MidnightColor;
+        colors[6] = MorningColor;
 
         times = new float[numTimesOfDay + 1];
         times[0] = MorningTime;
@@ -57,7 +63,10 @@ public class DayNightScript : MonoBehaviour
         times[2] = AfternoonTime;
         times[3] = EveningTime;
         times[4] = NightTime;
+        times[5] = MidnightTime;
         times[5] = 1.0f;
+
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 	}
 	
 	void Update()
@@ -85,6 +94,9 @@ public class DayNightScript : MonoBehaviour
 
         overlayTexture.SetPixel(0, 0, currentOverlay);
         overlayTexture.Apply();
+
+        spriteRenderer.sprite = Sprite.Create(overlayTexture, new Rect(0, 0, 2 * Screen.width, 2 * Screen.height), new Vector2(0.5f, 0.5f));
+        spriteRenderer.transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, 0.0f);
 	}
 
     public void Initialize()
@@ -94,7 +106,6 @@ public class DayNightScript : MonoBehaviour
 
     void OnGUI()
     {
-        GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), overlayTexture);
         GUI.Label(new Rect(10, 10, 200, 200), SecondsRemaining.ToString() + " / " + DayLengthInSeconds.ToString());
     }
 }
