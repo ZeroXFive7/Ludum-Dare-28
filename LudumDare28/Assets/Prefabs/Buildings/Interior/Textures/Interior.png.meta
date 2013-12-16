@@ -129,25 +129,25 @@ TextureImporter:
     - name: Interior_9
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 538
-        height: 542
+        x: 2270
+        y: 566
+        width: 535
+        height: 543
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: Interior_10
       rect:
         serializedVersion: 2
-        x: 566
-        y: 3
-        width: 543
-        height: 539
+        x: 2833
+        y: 569
+        width: 542
+        height: 537
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: Interior_11
       rect:
         serializedVersion: 2
-        x: 1137
+        x: 0
         y: 0
         width: 538
         height: 542
@@ -156,18 +156,36 @@ TextureImporter:
     - name: Interior_12
       rect:
         serializedVersion: 2
-        x: 1700
-        y: 0
-        width: 542
+        x: 566
+        y: 3
+        width: 543
         height: 539
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: Interior_13
       rect:
         serializedVersion: 2
-        x: 2266
+        x: 1137
+        y: 0
+        width: 538
+        height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Interior_14
+      rect:
+        serializedVersion: 2
+        x: 1700
         y: 0
         width: 542
+        height: 539
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Interior_15
+      rect:
+        serializedVersion: 2
+        x: 2266
+        y: 0
+        width: 543
         height: 542
       alignment: 0
       pivot: {x: 0, y: 0}

@@ -1,0 +1,85 @@
+fileFormatVersion: 2
+guid: ff0f86b2524a2194c8c7588a1ec09280
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: house_props_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 708
+        width: 1670
+        height: 629
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: house_props_1
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 755
+        width: 343
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: house_props_2
+      rect:
+        serializedVersion: 2
+        x: 2149
+        y: 714
+        width: 255
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: house_props_3
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 0
+        width: 944
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+  spritePackingTag: 
+  userData: 

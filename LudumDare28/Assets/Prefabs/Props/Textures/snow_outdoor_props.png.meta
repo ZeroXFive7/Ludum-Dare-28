@@ -1,0 +1,103 @@
+fileFormatVersion: 2
+guid: 0f67d4fbb4389db4cb25ce3f61bb60a6
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: snow_outdoor_props_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1793
+        width: 293
+        height: 491
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: snow_outdoor_props_1
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 1772
+        width: 517
+        height: 405
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: snow_outdoor_props_2
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 972
+        width: 479
+        height: 1343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: snow_outdoor_props_3
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 929
+        width: 671
+        height: 1062
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: snow_outdoor_props_4
+      rect:
+        serializedVersion: 2
+        x: 2390
+        y: 921
+        width: 533
+        height: 1261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: snow_outdoor_props_5
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 0
+        width: 262
+        height: 1725
+      alignment: 0
+      pivot: {x: 0, y: 0}
+  spritePackingTag: 
+  userData: 

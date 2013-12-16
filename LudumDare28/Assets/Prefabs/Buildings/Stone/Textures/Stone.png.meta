@@ -49,34 +49,34 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4
-        y: 1136
+        y: 2276
         width: 534
-        height: 535
+        height: 534
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: Stone_1
       rect:
         serializedVersion: 2
         x: 570
-        y: 1136
+        y: 2276
         width: 535
-        height: 539
+        height: 538
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: Stone_2
       rect:
         serializedVersion: 2
         x: 1137
-        y: 1136
+        y: 2276
         width: 538
-        height: 535
+        height: 534
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: Stone_3
       rect:
         serializedVersion: 2
         x: 1704
-        y: 1133
+        y: 2272
         width: 534
         height: 538
       alignment: 0
@@ -85,34 +85,34 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2266
-        y: 1136
+        y: 2276
         width: 539
-        height: 535
+        height: 534
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: Stone_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 569
+        y: 1709
         width: 538
-        height: 540
+        height: 539
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: Stone_6
       rect:
         serializedVersion: 2
         x: 570
-        y: 569
+        y: 1709
         width: 539
-        height: 540
+        height: 539
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: Stone_7
       rect:
         serializedVersion: 2
         x: 1137
-        y: 566
+        y: 1705
         width: 538
         height: 539
       alignment: 0
@@ -121,7 +121,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1700
-        y: 566
+        y: 1705
         width: 538
         height: 539
       alignment: 0
@@ -129,46 +129,172 @@ TextureImporter:
     - name: Stone_9
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 538
-        height: 542
+        x: 2270
+        y: 1705
+        width: 535
+        height: 543
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: Stone_10
       rect:
         serializedVersion: 2
-        x: 566
-        y: 3
-        width: 543
-        height: 539
+        x: 2833
+        y: 1709
+        width: 542
+        height: 535
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: Stone_11
       rect:
         serializedVersion: 2
-        x: 1137
-        y: 0
-        width: 538
-        height: 542
+        x: 0
+        y: 1139
+        width: 542
+        height: 538
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: Stone_12
       rect:
         serializedVersion: 2
-        x: 1700
-        y: 0
-        width: 542
-        height: 538
+        x: 566
+        y: 1139
+        width: 539
+        height: 542
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: Stone_13
       rect:
         serializedVersion: 2
-        x: 2266
-        y: 0
+        x: 1133
+        y: 1143
         width: 542
+        height: 538
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Stone_14
+      rect:
+        serializedVersion: 2
+        x: 1704
+        y: 1139
+        width: 538
         height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Stone_15
+      rect:
+        serializedVersion: 2
+        x: 2266
+        y: 1139
+        width: 543
+        height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Stone_16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 573
+        width: 540
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Stone_17
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 573
+        width: 539
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Stone_18
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 572
+        width: 547
+        height: 541
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Stone_19
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 572
+        width: 547
+        height: 541
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Stone_20
+      rect:
+        serializedVersion: 2
+        x: 2261
+        y: 572
+        width: 548
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Stone_21
+      rect:
+        serializedVersion: 2
+        x: 2833
+        y: 572
+        width: 548
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Stone_22
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 7
+        width: 540
+        height: 539
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Stone_23
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 7
+        width: 539
+        height: 539
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Stone_24
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 7
+        width: 547
+        height: 541
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Stone_25
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 7
+        width: 547
+        height: 541
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Stone_26
+      rect:
+        serializedVersion: 2
+        x: 2261
+        y: 0
+        width: 548
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Stone_27
+      rect:
+        serializedVersion: 2
+        x: 2833
+        y: 0
+        width: 548
+        height: 548
       alignment: 0
       pivot: {x: 0, y: 0}
   spritePackingTag: 

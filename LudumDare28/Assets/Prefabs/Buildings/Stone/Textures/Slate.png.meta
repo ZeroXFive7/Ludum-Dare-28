@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3f70aee62f8a83548af98eea3c9b220f
+guid: ce4f8709c7c550946bc3fb1acc58570c
 TextureImporter:
   serializedVersion: 2
   mipmaps:
@@ -45,34 +45,34 @@ TextureImporter:
     compressionQuality: 50
   spriteSheet:
     sprites:
-    - name: Siding_0
+    - name: Slate_0
       rect:
         serializedVersion: 2
         x: 4
-        y: 2275
+        y: 2276
         width: 534
-        height: 535
+        height: 534
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: Siding_1
+    - name: Slate_1
       rect:
         serializedVersion: 2
         x: 570
-        y: 2275
+        y: 2276
         width: 535
-        height: 539
+        height: 538
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: Siding_2
+    - name: Slate_2
       rect:
         serializedVersion: 2
         x: 1137
-        y: 2275
+        y: 2276
         width: 538
-        height: 535
+        height: 534
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: Siding_3
+    - name: Slate_3
       rect:
         serializedVersion: 2
         x: 1704
@@ -81,34 +81,34 @@ TextureImporter:
         height: 538
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: Siding_4
+    - name: Slate_4
       rect:
         serializedVersion: 2
         x: 2266
-        y: 2275
+        y: 2276
         width: 539
-        height: 535
+        height: 534
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: Siding_5
+    - name: Slate_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 1708
+        y: 1709
         width: 538
-        height: 540
+        height: 539
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: Siding_6
+    - name: Slate_6
       rect:
         serializedVersion: 2
         x: 570
-        y: 1708
+        y: 1709
         width: 539
-        height: 540
+        height: 539
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: Siding_7
+    - name: Slate_7
       rect:
         serializedVersion: 2
         x: 1137
@@ -117,7 +117,7 @@ TextureImporter:
         height: 539
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: Siding_8
+    - name: Slate_8
       rect:
         serializedVersion: 2
         x: 1700
@@ -126,7 +126,7 @@ TextureImporter:
         height: 539
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: Siding_9
+    - name: Slate_9
       rect:
         serializedVersion: 2
         x: 2270
@@ -135,16 +135,16 @@ TextureImporter:
         height: 543
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: Siding_10
+    - name: Slate_10
       rect:
         serializedVersion: 2
         x: 2833
-        y: 1708
+        y: 1709
         width: 542
-        height: 536
+        height: 535
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: Siding_11
+    - name: Slate_11
       rect:
         serializedVersion: 2
         x: 0
@@ -153,7 +153,7 @@ TextureImporter:
         height: 538
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: Siding_12
+    - name: Slate_12
       rect:
         serializedVersion: 2
         x: 566
@@ -162,16 +162,16 @@ TextureImporter:
         height: 542
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: Siding_13
+    - name: Slate_13
       rect:
         serializedVersion: 2
         x: 1133
-        y: 1142
+        y: 1143
         width: 542
-        height: 539
+        height: 538
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: Siding_14
+    - name: Slate_14
       rect:
         serializedVersion: 2
         x: 1704
@@ -180,7 +180,7 @@ TextureImporter:
         height: 542
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: Siding_15
+    - name: Slate_15
       rect:
         serializedVersion: 2
         x: 2266
@@ -189,7 +189,7 @@ TextureImporter:
         height: 542
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: Siding_16
+    - name: Slate_16
       rect:
         serializedVersion: 2
         x: 1
@@ -198,7 +198,7 @@ TextureImporter:
         height: 540
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: Siding_17
+    - name: Slate_17
       rect:
         serializedVersion: 2
         x: 568
@@ -207,7 +207,7 @@ TextureImporter:
         height: 540
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: Siding_18
+    - name: Slate_18
       rect:
         serializedVersion: 2
         x: 1127
@@ -216,7 +216,7 @@ TextureImporter:
         height: 541
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: Siding_19
+    - name: Slate_19
       rect:
         serializedVersion: 2
         x: 1701
@@ -225,7 +225,7 @@ TextureImporter:
         height: 541
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: Siding_20
+    - name: Slate_20
       rect:
         serializedVersion: 2
         x: 2261
@@ -234,7 +234,7 @@ TextureImporter:
         height: 548
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: Siding_21
+    - name: Slate_21
       rect:
         serializedVersion: 2
         x: 2833
@@ -243,7 +243,7 @@ TextureImporter:
         height: 548
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: Siding_22
+    - name: Slate_22
       rect:
         serializedVersion: 2
         x: 1
@@ -252,7 +252,7 @@ TextureImporter:
         height: 539
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: Siding_23
+    - name: Slate_23
       rect:
         serializedVersion: 2
         x: 568
@@ -261,7 +261,7 @@ TextureImporter:
         height: 539
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: Siding_24
+    - name: Slate_24
       rect:
         serializedVersion: 2
         x: 1127
@@ -270,7 +270,7 @@ TextureImporter:
         height: 541
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: Siding_25
+    - name: Slate_25
       rect:
         serializedVersion: 2
         x: 1701
@@ -279,7 +279,7 @@ TextureImporter:
         height: 541
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: Siding_26
+    - name: Slate_26
       rect:
         serializedVersion: 2
         x: 2261
@@ -288,7 +288,7 @@ TextureImporter:
         height: 548
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: Siding_27
+    - name: Slate_27
       rect:
         serializedVersion: 2
         x: 2833
