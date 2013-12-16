@@ -3,14 +3,22 @@ using System.Collections;
 
 public class UnmovableObjectScript : MonoBehaviour {
 
+    private Vector3 origSize;
 	// Use this for initialization
 	void Start () {
-	
+
+        Vector3 actualSize = getActualSize();
+        // change the boxColliderSize to be the size of the image.
+        BoxCollider2D box = (BoxCollider2D)this.gameObject.collider2D;
+        if (box != null)
+        {
+            box.size = actualSize;
+        }
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
 
     /*
@@ -20,5 +28,15 @@ public class UnmovableObjectScript : MonoBehaviour {
     void FixedUpdate()
     {
         
+    }
+
+    private Vector3 getActualSize()
+    {
+        SpriteRenderer sr = this.gameObject.GetComponent("SpriteRenderer") as SpriteRenderer;
+        Vector3 size = this.gameObject.transform.localScale;
+        float x = sr.bounds.size.x / size.x;
+        float y = sr.bounds.size.y / size.y;
+        float z = sr.bounds.size.z / size.z;
+        return new Vector3(x, y, z);
     }
 }

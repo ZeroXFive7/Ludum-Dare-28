@@ -22,8 +22,6 @@ public class MovableObjectScript : MonoBehaviour {
     void Update()
     {
         getInput();
-
-        changeScenes();
     }
 
     /*
@@ -34,6 +32,16 @@ public class MovableObjectScript : MonoBehaviour {
         // Move the game object
         rigidbody2D.drag = objectDrag;
         rigidbody2D.velocity = movement;
+    }
+
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.tag == "SceneTrigger")
+        {
+            BoxCollider2D boxCollider = collider.gameObject.GetComponent<BoxCollider2D>();
+            SceneTriggerScript newScene = (SceneTriggerScript)boxCollider.gameObject.GetComponent<SceneTriggerScript>();
+            Application.LoadLevel(newScene.getScene());
+        }
     }
 
     void OnTriggerStay2D(Collider2D collider)
@@ -136,15 +144,6 @@ public class MovableObjectScript : MonoBehaviour {
                     GUI.Box(new Rect(x + i, y, 50f, 50.0f), flower);
                 }
             }
-        }
-    }
-
-    private void changeScenes()
-    {
-        if (transform.position.x < -5)
-        {
-            Application.LoadLevel("MaxSceneSecond");
-            
         }
     }
 }

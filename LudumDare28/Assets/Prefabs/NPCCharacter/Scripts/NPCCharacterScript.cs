@@ -16,6 +16,23 @@ public class NPCCharacterScript : MonoBehaviour {
         conversationPieces.Add("Hello, I'm an NPC");
         conversationPieces.Add("I think Max, Jake, and Josh are awesome!");
         conversationPieces.Add("I also hate people. Go away!");
+
+        Vector3 actualSize = getActualSize();
+        // change the boxColliderSize to be the size of the image.
+        BoxCollider2D box = (BoxCollider2D) this.gameObject.collider2D;
+        if (box != null)
+        {
+            box.size = actualSize;
+        }
+
+        BoxCollider2D childTrigger = (BoxCollider2D)this.gameObject.transform.GetChild(0).collider2D;
+        if (childTrigger != null)
+        {
+            // make the trigger slightly larger than the npc.
+            childTrigger.size = actualSize*1.1f;
+        }
+
+        // Now change the trigger size to be the size of the image.
     }
 
     void Update()
@@ -34,8 +51,11 @@ public class NPCCharacterScript : MonoBehaviour {
     void FixedUpdate()
     {
         // This keeps the object from having mementum
-        rigidbody2D.drag = objectDrag;
-        rigidbody2D.velocity = movement;
+        if (this.rigidbody2D != null)
+        {
+            rigidbody2D.drag = objectDrag;
+            rigidbody2D.velocity = movement;
+        }
     }
 
     public void setConversation(ArrayList conversation)
@@ -68,5 +88,15 @@ public class NPCCharacterScript : MonoBehaviour {
             GUI.contentColor = Color.black;
             GUI.Label(new Rect(25, 25, 1000, 100), (string) conversationPieces[conversationPlace]); 
         }
+    }
+
+    private Vector3 getActualSize()
+    {
+        SpriteRenderer sr = this.gameObject.GetComponent("SpriteRenderer") as SpriteRenderer;
+        Vector3 size = this.gameObject.transform.localScale;
+        float x = sr.bounds.size.x / size.x;
+        float y = sr.bounds.size.y / size.y;
+        float z = sr.bounds.size.z / size.z;
+        return new Vector3(x, y, z);
     }
 }
