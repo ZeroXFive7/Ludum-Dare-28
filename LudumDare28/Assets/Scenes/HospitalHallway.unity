@@ -349,6 +349,10 @@ Prefab:
       propertyPath: Forward.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 0205638ddad916f4f826612ebe886740, type: 2}
+      propertyPath: DestinationTag
+      value: SceneTrigger0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0205638ddad916f4f826612ebe886740, type: 2}
   m_RootGameObject: {fileID: 934213152}
@@ -658,6 +662,10 @@ Prefab:
     - target: {fileID: 100000, guid: 0205638ddad916f4f826612ebe886740, type: 2}
       propertyPath: m_Name
       value: SceneTriggerGeneric1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 0205638ddad916f4f826612ebe886740, type: 2}
+      propertyPath: DestinationTag
+      value: SceneTrigger0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0205638ddad916f4f826612ebe886740, type: 2}
@@ -1325,6 +1333,10 @@ Prefab:
       propertyPath: Forward.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 0205638ddad916f4f826612ebe886740, type: 2}
+      propertyPath: DestinationTag
+      value: SceneTrigger0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0205638ddad916f4f826612ebe886740, type: 2}
   m_RootGameObject: {fileID: 1537818511}
@@ -1525,6 +1537,10 @@ Prefab:
     - target: {fileID: 100000, guid: 0205638ddad916f4f826612ebe886740, type: 2}
       propertyPath: m_Name
       value: SceneTriggerGeneric4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 0205638ddad916f4f826612ebe886740, type: 2}
+      propertyPath: DestinationTag
+      value: SceneTrigger0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0205638ddad916f4f826612ebe886740, type: 2}
@@ -1779,6 +1795,10 @@ Prefab:
     - target: {fileID: 11400000, guid: 0205638ddad916f4f826612ebe886740, type: 2}
       propertyPath: Forward.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 0205638ddad916f4f826612ebe886740, type: 2}
+      propertyPath: DestinationTag
+      value: SceneTrigger0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0205638ddad916f4f826612ebe886740, type: 2}
@@ -2982,6 +3002,10 @@ Prefab:
       propertyPath: m_Name
       value: SceneTriggerMomsRoom
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 0205638ddad916f4f826612ebe886740, type: 2}
+      propertyPath: DestinationTag
+      value: SceneTrigger0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0205638ddad916f4f826612ebe886740, type: 2}
   m_RootGameObject: {fileID: 1384033205}
@@ -3161,6 +3185,10 @@ Prefab:
     - target: {fileID: 100000, guid: 0205638ddad916f4f826612ebe886740, type: 2}
       propertyPath: m_Name
       value: SceneTriggerGeneric2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 0205638ddad916f4f826612ebe886740, type: 2}
+      propertyPath: DestinationTag
+      value: SceneTrigger0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0205638ddad916f4f826612ebe886740, type: 2}

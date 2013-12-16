@@ -4,15 +4,19 @@ using System.Collections;
 public class UnmovableObjectScript : MonoBehaviour {
 
     private Vector3 origSize;
+    public bool useCustomColliderBox = false;
 	// Use this for initialization
 	void Start () {
 
         Vector3 actualSize = getActualSize();
         // change the boxColliderSize to be the size of the image.
-        BoxCollider2D box = (BoxCollider2D)this.gameObject.collider2D;
-        if (box != null)
+        if (!useCustomColliderBox)
         {
-            box.size = actualSize;
+            BoxCollider2D box = (BoxCollider2D)this.gameObject.collider2D;
+            if (box != null)
+            {
+                box.size = actualSize;
+            }
         }
 	}
 	

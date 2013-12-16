@@ -7,32 +7,33 @@ public class NPCCharacterScript : MonoBehaviour {
     public float objectDrag = 25.0f;
     private Vector2 movement;
     private bool inConversation = false;
-    private ArrayList conversationPieces = new ArrayList();
+    public string[] conversationPieces;
+    public bool useCustomColliderBox = false;
     private int conversationPlace = -1; // so it's incremented to the beginning of the conversation at first.
 
     // Use this for initialization
     void Start()
     {
-        conversationPieces.Add("Hello, I'm an NPC");
-        conversationPieces.Add("I think Max, Jake, and Josh are awesome!");
-        conversationPieces.Add("I also hate people. Go away!");
-
-        Vector3 actualSize = getActualSize();
+        if (!useCustomColliderBox)
+        {
+            Vector3 actualSize = getActualSize();
         // change the boxColliderSize to be the size of the image.
-        BoxCollider2D box = (BoxCollider2D) this.gameObject.collider2D;
-        if (box != null)
-        {
-            box.size = actualSize;
-        }
+            BoxCollider2D box = (BoxCollider2D) this.gameObject.collider2D;
+            if (box != null)
+            {
+                box.size = actualSize;
+            }
 
-        BoxCollider2D childTrigger = (BoxCollider2D)this.gameObject.transform.GetChild(0).collider2D;
-        if (childTrigger != null)
-        {
-            // make the trigger slightly larger than the npc.
-            childTrigger.size = actualSize*1.1f;
-        }
+            BoxCollider2D childTrigger = (BoxCollider2D)this.gameObject.transform.GetChild(0).collider2D;
+            if (childTrigger != null)
+            {
+                // make the trigger slightly larger than the npc.
+                childTrigger.size = actualSize*1.1f;
+            }
 
-        // Now change the trigger size to be the size of the image.
+        
+        }
+        
     }
 
     void Update()
@@ -58,17 +59,12 @@ public class NPCCharacterScript : MonoBehaviour {
         }
     }
 
-    public void setConversation(ArrayList conversation)
-    {
-        conversationPieces = conversation;
-    }
-
     public void continueConversation()
     {
         inConversation = true;
         conversationPlace++;
 
-        if (conversationPlace >= conversationPieces.Count)
+        if (conversationPlace >= conversationPieces.Length)
         {
             leaveConversation();
         }

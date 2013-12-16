@@ -379,6 +379,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectSpeed: {x: 20, y: 20}
   objectDrag: 25
+  conversationPieces: []
+  useCustomColliderBox: 0
 --- !u!61 &358120705
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -803,6 +805,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectSpeed: {x: 20, y: 20}
   objectDrag: 25
+  conversationPieces: []
+  useCustomColliderBox: 0
 --- !u!61 &560253570
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -938,6 +942,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectSpeed: {x: 20, y: 20}
   objectDrag: 25
+  conversationPieces: []
+  useCustomColliderBox: 0
 --- !u!61 &730437897
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1620,6 +1626,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Forward: {x: -0, y: -1}
   triggerToScene: HospitalHallway
+  DestinationTag: SceneTrigger0
 --- !u!1 &1509099643
 GameObject:
   m_ObjectHideFlags: 0
@@ -1664,6 +1671,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectSpeed: {x: 20, y: 20}
   objectDrag: 25
+  conversationPieces: []
+  useCustomColliderBox: 0
 --- !u!61 &1509099647
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2380,6 +2389,10 @@ Prefab:
     - target: {fileID: 11400000, guid: 0205638ddad916f4f826612ebe886740, type: 2}
       propertyPath: triggerToScene
       value: HospitalHallway
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 0205638ddad916f4f826612ebe886740, type: 2}
+      propertyPath: DestinationTag
+      value: SceneTrigger0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0205638ddad916f4f826612ebe886740, type: 2}
