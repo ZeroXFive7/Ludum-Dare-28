@@ -1531,7 +1531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3b34e9294ddea40a12626e989b852a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerToScene: MaxSceneSecond
+  triggerToScene: HospitalHallway
 --- !u!1 &1509099643
 GameObject:
   m_ObjectHideFlags: 0
@@ -2399,6 +2399,10 @@ Prefab:
     - target: {fileID: 100000, guid: 0205638ddad916f4f826612ebe886740, type: 2}
       propertyPath: m_TagString
       value: SceneTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 0205638ddad916f4f826612ebe886740, type: 2}
+      propertyPath: triggerToScene
+      value: HospitalHallway
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0205638ddad916f4f826612ebe886740, type: 2}
