@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MovableObjectScript : MonoBehaviour {
 
-    public Vector2 objectSpeed = new Vector2(20, 20);
+    public float objectSpeed = 20;
     public float objectDrag = 25.0f;
     private Vector2 movement;
     private bool pressI = false;
@@ -13,10 +13,17 @@ public class MovableObjectScript : MonoBehaviour {
     public Texture2D flower;
 
     private InventoryScript inventory = new InventoryScript();
+    private Animator spriteAnimator;
+
+    private enum FacingDirection { forward, backward, left, right };
+    private FacingDirection facing = FacingDirection.forward;
+
+    private string lastSceneTriggerTag = "SceneTrigger";
+    private string destinationTag = null;
 
     // Use this for initialization
 	void Start () {
-	
+        spriteAnimator = GetComponent<Animator>() as Animator;
 	}
 
     void Update()
@@ -32,15 +39,36 @@ public class MovableObjectScript : MonoBehaviour {
         // Move the game object
         rigidbody2D.drag = objectDrag;
         rigidbody2D.velocity = movement;
+
+        Vector2 normalizedVelocity = rigidbody2D.velocity.normalized;
+        UpdateFacing(normalizedVelocity);
+
+        UpdateAnimation();
+    }
+
+    void OnLevelWasLoaded()
+    {
+        Debug.Log(destinationTag);
+        SceneTriggerScript trigger = GameObject.FindGameObjectWithTag(destinationTag).GetComponent<SceneTriggerScript>() as SceneTriggerScript;
+
+        Debug.Log(trigger.name + ", " + destinationTag + ", " + trigger.Forward + ", " + trigger.transform.position);
+
+        UpdateFacing(trigger.Forward);
+        transform.position = trigger.transform.position + new Vector3(trigger.Forward.x, trigger.Forward.y, 0.0f) * rigidbody2D.renderer.bounds.size.y;
     }
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.tag == "SceneTrigger")
+        if (collider.tag.Contains("SceneTrigger"))
         {
             BoxCollider2D boxCollider = collider.gameObject.GetComponent<BoxCollider2D>();
-            SceneTriggerScript newScene = (SceneTriggerScript)boxCollider.gameObject.GetComponent<SceneTriggerScript>();
-            Application.LoadLevel(newScene.getScene());
+
+            SceneTriggerScript exitTrigger = (SceneTriggerScript)boxCollider.gameObject.GetComponent<SceneTriggerScript>();
+            lastSceneTriggerTag = exitTrigger.gameObject.tag;
+            destinationTag = exitTrigger.DestinationTag == null ? lastSceneTriggerTag : exitTrigger.DestinationTag;
+
+            DontDestroyOnLoad(gameObject);
+            Application.LoadLevel(exitTrigger.getScene());
         }
     }
 
@@ -128,7 +156,7 @@ public class MovableObjectScript : MonoBehaviour {
         float inputY = Input.GetAxis("Vertical");
 
         // Movement per direction
-        movement = new Vector2(objectSpeed.x * inputX, objectSpeed.y * inputY);
+        movement = new Vector2(inputX, inputY).normalized * objectSpeed;
     }
 
     void OnGUI()
@@ -144,6 +172,46 @@ public class MovableObjectScript : MonoBehaviour {
                     GUI.Box(new Rect(x + i, y, 50f, 50.0f), flower);
                 }
             }
+        }
+    }
+
+    private void UpdateAnimation()
+    {
+        string animationPrefix;
+        if (rigidbody2D.velocity.sqrMagnitude > 0.0f)
+        {
+            animationPrefix = "player_run_";
+        }
+        else
+        {
+            animationPrefix = "player_stand_";
+        }
+
+        spriteAnimator.Play(animationPrefix + facing.ToString());
+    }
+
+    private void UpdateFacing(Vector2 facingVector)
+    {
+        float downDot = Vector2.Dot(-Vector2.up, facingVector);
+        float upDot = Vector2.Dot(Vector2.up, facingVector);
+        float leftDot = Vector2.Dot(-Vector2.right, facingVector);
+        float rightDot = Vector2.Dot(Vector2.right, facingVector);
+
+        if (rightDot > 0.5f)
+        {
+            facing = FacingDirection.right;
+        }
+        if (leftDot > 0.5f)
+        {
+            facing = FacingDirection.left;
+        }
+        if (upDot > 0.5f)
+        {
+            facing = FacingDirection.backward;
+        }
+        if (downDot > 0.5f)
+        {
+            facing = FacingDirection.forward;
         }
     }
 }

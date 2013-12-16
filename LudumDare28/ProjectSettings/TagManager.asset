@@ -5,8 +5,19 @@ TagManager:
   tags:
   - NPC
   - Item
-  - SceneTrigger
-  - 
+  - SceneTrigger0
+  - SceneTrigger1
+  - SceneTrigger2
+  - SceneTrigger3
+  - SceneTrigger4
+  - SceneTrigger5
+  - SceneTrigger6
+  - SceneTrigger7
+  - SceneTrigger8
+  - SceneTrigger9
+  - SceneTrigger10
+  - SceneTrigger11
+  - SceneTrigger12
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

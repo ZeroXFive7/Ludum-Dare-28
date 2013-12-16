@@ -94,8 +94,6 @@ public class DayNightScript : MonoBehaviour
             timeIndex++;
         }
 
-        Debug.Log(timeIndex);
-
         float timeOfDayFraction = (timeOfDay - times[timeIndex]) / (times[timeIndex + 1] - times[timeIndex]);
         Color currentOverlay = timeOfDayFraction * colors[timeIndex + 1] + (1.0f - timeOfDayFraction) * colors[timeIndex];
 

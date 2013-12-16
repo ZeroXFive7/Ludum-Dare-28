@@ -12,6 +12,7 @@ GameObject:
   - 61: {fileID: 6100000}
   - 50: {fileID: 5000000}
   - 114: {fileID: 11400000}
+  - 95: {fileID: 9500000}
   m_Layer: 11
   m_Name: MovableObject
   m_TagString: Untagged
@@ -130,6 +131,20 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
+--- !u!95 &9500000
+Animator:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ac0e38e8abd7f654db05f96f34b5200b, type: 2}
+  m_CullingMode: 0
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -141,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abbae761f05b0294cb4edad2437a03fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectSpeed: {x: 20, y: 20}
+  objectSpeed: 20
   objectDrag: 30
   x: 750
   y: 375
@@ -174,7 +189,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 1
   m_SortingLayerID: 2386906519
-  m_Sprite: {fileID: 21300000, guid: ee440d94e4e72db48b57e98021796428, type: 3}
+  m_Sprite: {fileID: 21300004, guid: dea6f9bd062fa054b939d0031a65f23c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
