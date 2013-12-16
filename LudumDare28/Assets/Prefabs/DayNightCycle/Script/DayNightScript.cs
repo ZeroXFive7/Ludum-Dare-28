@@ -101,7 +101,7 @@ public class DayNightScript : MonoBehaviour
         overlayTexture.Apply();
 
         spriteRenderer.sprite = Sprite.Create(overlayTexture, new Rect(0, 0, 2 * Screen.width, 2 * Screen.height), new Vector2(0.5f, 0.5f));
-        spriteRenderer.transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, 0.0f);
+        spriteRenderer.transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z + 2.0f);
 	}
 
     public void Initialize()

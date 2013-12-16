@@ -48,10 +48,7 @@ public class MovableObjectScript : MonoBehaviour {
 
     void OnLevelWasLoaded()
     {
-        Debug.Log(destinationTag);
         SceneTriggerScript trigger = GameObject.FindGameObjectWithTag(destinationTag).GetComponent<SceneTriggerScript>() as SceneTriggerScript;
-
-        Debug.Log(trigger.name + ", " + destinationTag + ", " + trigger.Forward + ", " + trigger.transform.position);
 
         UpdateFacing(trigger.Forward);
         transform.position = trigger.transform.position + new Vector3(trigger.Forward.x, trigger.Forward.y, 0.0f) * rigidbody2D.renderer.bounds.size.y;
