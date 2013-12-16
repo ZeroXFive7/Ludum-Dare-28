@@ -17,5 +17,7 @@ EditorBuildSettings:
     path: Assets/Scenes/HospitalRoom.unity
   - enabled: 0
     path: Assets/Scenes/MainWorld.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/perspective.unity
+  - enabled: 1
+    path: Assets/Scenes/Hospital.unity

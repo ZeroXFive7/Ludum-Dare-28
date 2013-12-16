@@ -109,8 +109,8 @@ public class PlayerMovement : MonoBehaviour
         float toCamLength = (Camera.main.transform.position - transform.position).magnitude;
         Ray ray = new Ray(transform.position, -Vector3.forward);
 
-        RaycastHit result;
-        if (Physics.Raycast(ray, out result, toCamLength))
+        RaycastHit[] results = Physics.RaycastAll(ray, toCamLength);
+        foreach (RaycastHit result in results)
         {
             Transform parent = result.transform.gameObject.transform.parent;
             if (parent != null)
