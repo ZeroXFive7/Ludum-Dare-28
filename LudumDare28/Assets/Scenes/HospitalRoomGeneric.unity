@@ -234,19 +234,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcdf733a6e1507047b2e027e8967f4ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MorningColor: {r: .933823526, g: .571280301, b: .336451113, a: .368627459}
-  MorningTime: 0
-  MiddayColor: {r: 1, g: 1, b: 1, a: .509803951}
-  MiddayTime: .170000002
-  AfternoonColor: {r: .934155405, g: .992647052, b: .386840403, a: .443137258}
-  AfternoonTime: .340000004
-  EveningColor: {r: .558638632, g: .305038959, b: .669117689, a: .494117647}
-  EveningTime: .50999999
-  NightColor: {r: .117647052, g: .117647052, b: .117647052, a: .674509823}
-  NightTime: .680000007
-  MidnightColor: {r: .0428741239, g: .21352908, b: .448529422, a: .749019623}
-  MidnightTime: .850000024
-  DayLengthInSeconds: 600
 --- !u!4 &182237330
 Transform:
   m_ObjectHideFlags: 0
@@ -316,7 +303,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1823660913}
+    m_TransformParent: {fileID: 653692071}
     m_Modifications:
     - target: {fileID: 400000, guid: 09d30e6cab051834da5072573afe864e, type: 2}
       propertyPath: m_LocalPosition.x
@@ -352,11 +339,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 21200000, guid: 09d30e6cab051834da5072573afe864e, type: 2}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 21200000, guid: 09d30e6cab051834da5072573afe864e, type: 2}
       propertyPath: m_SortingLayerID
-      value: 2834833517
+      value: 2386906519
       objectReference: {fileID: 0}
     - target: {fileID: 21200000, guid: 09d30e6cab051834da5072573afe864e, type: 2}
       propertyPath: m_Sprite
@@ -370,6 +357,30 @@ Prefab:
     - target: {fileID: 400000, guid: 09d30e6cab051834da5072573afe864e, type: 2}
       propertyPath: m_LocalScale.y
       value: .716401935
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 09d30e6cab051834da5072573afe864e, type: 2}
+      propertyPath: useCustomColliderBox
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 09d30e6cab051834da5072573afe864e, type: 2}
+      propertyPath: m_Size.x
+      value: 3.92857456
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 09d30e6cab051834da5072573afe864e, type: 2}
+      propertyPath: m_Center.x
+      value: -.012444064
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 09d30e6cab051834da5072573afe864e, type: 2}
+      propertyPath: m_Size.y
+      value: 2.31594348
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 09d30e6cab051834da5072573afe864e, type: 2}
+      propertyPath: m_Center.y
+      value: -.837971807
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 09d30e6cab051834da5072573afe864e, type: 2}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 09d30e6cab051834da5072573afe864e, type: 2}
@@ -438,7 +449,7 @@ GameObject:
   - 212: {fileID: 426371966}
   - 61: {fileID: 426371965}
   - 114: {fileID: 426371964}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FlowerPot2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,7 +466,7 @@ Transform:
   m_LocalPosition: {x: 5.59081078, y: 3.77236462, z: 0}
   m_LocalScale: {x: .76368928, y: .76368922, z: 1}
   m_Children: []
-  m_Father: {fileID: 1823660913}
+  m_Father: {fileID: 653692071}
 --- !u!114 &426371964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -468,6 +479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d42858f4b385384c92b7cab509a4a35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useCustomColliderBox: 1
 --- !u!61 &426371965
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -478,8 +490,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .639999986, y: .639999986}
-  m_Center: {x: 0, y: 0}
+  m_Size: {x: 3.92097497, y: 2.31748891}
+  m_Center: {x: -.0123335039, y: -.838744521}
 --- !u!212 &426371966
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -499,9 +511,9 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 1
-  m_SortingLayerID: 2834833517
+  m_SortingLayerID: 2386906519
   m_Sprite: {fileID: 21300000, guid: f804f2dcae714f24ea63053c3dca1234, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &653692070
@@ -530,6 +542,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 406327280}
+  - {fileID: 1531114332}
+  - {fileID: 426371963}
   m_Father: {fileID: 39997189}
 --- !u!1 &684383753
 GameObject:
@@ -895,6 +909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d42858f4b385384c92b7cab509a4a35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useCustomColliderBox: 0
 --- !u!212 &1195676204
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1219,6 +1234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectSpeed: {x: 20, y: 20}
   objectDrag: 25
+  useCustomColliderBox: 0
 --- !u!61 &1509099647
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1266,7 +1282,7 @@ GameObject:
   - 212: {fileID: 1531114335}
   - 61: {fileID: 1531114334}
   - 114: {fileID: 1531114333}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FlowerPot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1283,7 +1299,7 @@ Transform:
   m_LocalPosition: {x: -5.74510527, y: 3.77930498, z: 0}
   m_LocalScale: {x: .716401637, y: .716401935, z: 1}
   m_Children: []
-  m_Father: {fileID: 1823660913}
+  m_Father: {fileID: 653692071}
 --- !u!114 &1531114333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1296,6 +1312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d42858f4b385384c92b7cab509a4a35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useCustomColliderBox: 1
 --- !u!61 &1531114334
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1306,8 +1323,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .639999986, y: .639999986}
-  m_Center: {x: 0, y: 0}
+  m_Size: {x: 3.92857456, y: 2.31594348}
+  m_Center: {x: -.012444064, y: -.837971807}
 --- !u!212 &1531114335
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1327,9 +1344,9 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 1
-  m_SortingLayerID: 2834833517
+  m_SortingLayerID: 2386906519
   m_Sprite: {fileID: 21300000, guid: f804f2dcae714f24ea63053c3dca1234, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1652962854
@@ -1534,6 +1551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d42858f4b385384c92b7cab509a4a35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useCustomColliderBox: 0
 --- !u!212 &1770200670
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1583,8 +1601,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1531114332}
-  - {fileID: 426371963}
   - {fileID: 1509099644}
   - {fileID: 142661344}
   m_Father: {fileID: 39997189}
@@ -1948,7 +1964,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1823660913}
+    m_TransformParent: {fileID: 653692071}
     m_Modifications:
     - target: {fileID: 400000, guid: 09d30e6cab051834da5072573afe864e, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1989,11 +2005,11 @@ Prefab:
         type: 3}
     - target: {fileID: 21200000, guid: 09d30e6cab051834da5072573afe864e, type: 2}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 21200000, guid: 09d30e6cab051834da5072573afe864e, type: 2}
       propertyPath: m_SortingLayerID
-      value: 2834833517
+      value: 2386906519
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 09d30e6cab051834da5072573afe864e, type: 2}
       propertyPath: m_LocalScale.x
@@ -2002,6 +2018,30 @@ Prefab:
     - target: {fileID: 400000, guid: 09d30e6cab051834da5072573afe864e, type: 2}
       propertyPath: m_LocalScale.y
       value: .76368922
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 09d30e6cab051834da5072573afe864e, type: 2}
+      propertyPath: useCustomColliderBox
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 09d30e6cab051834da5072573afe864e, type: 2}
+      propertyPath: m_Size.x
+      value: 3.92097497
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 09d30e6cab051834da5072573afe864e, type: 2}
+      propertyPath: m_Size.y
+      value: 2.31748891
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 09d30e6cab051834da5072573afe864e, type: 2}
+      propertyPath: m_Center.x
+      value: -.0123335039
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 09d30e6cab051834da5072573afe864e, type: 2}
+      propertyPath: m_Center.y
+      value: -.838744521
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 09d30e6cab051834da5072573afe864e, type: 2}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 09d30e6cab051834da5072573afe864e, type: 2}
