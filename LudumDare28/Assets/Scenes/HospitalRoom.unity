@@ -233,19 +233,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcdf733a6e1507047b2e027e8967f4ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MorningColor: {r: .933823526, g: .571280301, b: .336451113, a: .368627459}
-  MorningTime: 0
-  MiddayColor: {r: 1, g: 1, b: 1, a: .509803951}
-  MiddayTime: .170000002
-  AfternoonColor: {r: .934155405, g: .992647052, b: .386840403, a: .443137258}
-  AfternoonTime: .340000004
-  EveningColor: {r: .558638632, g: .305038959, b: .669117689, a: .494117647}
-  EveningTime: .50999999
-  NightColor: {r: .117647052, g: .117647052, b: .117647052, a: .674509823}
-  NightTime: .680000007
-  MidnightColor: {r: .0428741239, g: .21352908, b: .448529422, a: .749019623}
-  MidnightTime: .850000024
-  DayLengthInSeconds: 600
 --- !u!4 &182237330
 Transform:
   m_ObjectHideFlags: 0
@@ -393,6 +380,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectSpeed: {x: 20, y: 20}
   objectDrag: 25
+  conversationPieces:
+  - I'm so proud of everything you've accomplised.
+  useCustomColliderBox: 0
 --- !u!61 &358120705
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -587,6 +577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d42858f4b385384c92b7cab509a4a35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useCustomColliderBox: 0
 --- !u!61 &426371965
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -667,6 +658,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectSpeed: {x: 20, y: 20}
   objectDrag: 25
+  conversationPieces:
+  - We're here dear. Everyone is here.
+  useCustomColliderBox: 0
 --- !u!61 &560253570
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -802,6 +796,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectSpeed: {x: 20, y: 20}
   objectDrag: 25
+  conversationPieces:
+  - I love you mom! Don't go!
+  useCustomColliderBox: 0
 --- !u!61 &730437897
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1252,6 +1249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d42858f4b385384c92b7cab509a4a35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useCustomColliderBox: 0
 --- !u!212 &1195676204
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1576,6 +1574,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectSpeed: {x: 20, y: 20}
   objectDrag: 25
+  conversationPieces: []
+  useCustomColliderBox: 0
 --- !u!61 &1509099647
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1653,6 +1653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d42858f4b385384c92b7cab509a4a35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useCustomColliderBox: 0
 --- !u!61 &1531114334
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1891,6 +1892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d42858f4b385384c92b7cab509a4a35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useCustomColliderBox: 0
 --- !u!212 &1770200670
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1922,6 +1924,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1823660913}
     m_Modifications:
+    - target: {fileID: 11400000, guid: 8b054060924de874fb6bb3bdb7b25d46, type: 2}
+      propertyPath: conversationPieces.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8b054060924de874fb6bb3bdb7b25d46, type: 2}
       propertyPath: m_LocalPosition.x
       value: -3.36409426
@@ -2010,6 +2016,10 @@ Prefab:
     - target: {fileID: 400002, guid: 8b054060924de874fb6bb3bdb7b25d46, type: 2}
       propertyPath: m_LocalPosition.y
       value: 2.11128354
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8b054060924de874fb6bb3bdb7b25d46, type: 2}
+      propertyPath: conversationPieces.Array.data[0]
+      value: We're here dear. Everyone is here.
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5000000, guid: 8b054060924de874fb6bb3bdb7b25d46, type: 2}
@@ -2127,6 +2137,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1823660913}
     m_Modifications:
+    - target: {fileID: 11400000, guid: 8b054060924de874fb6bb3bdb7b25d46, type: 2}
+      propertyPath: conversationPieces.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8b054060924de874fb6bb3bdb7b25d46, type: 2}
       propertyPath: m_LocalPosition.x
       value: 2.78814936
@@ -2179,6 +2193,10 @@ Prefab:
     - target: {fileID: 400000, guid: 8b054060924de874fb6bb3bdb7b25d46, type: 2}
       propertyPath: m_LocalScale.y
       value: .425055385
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8b054060924de874fb6bb3bdb7b25d46, type: 2}
+      propertyPath: conversationPieces.Array.data[0]
+      value: I love you mom! Don't go!
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5000000, guid: 8b054060924de874fb6bb3bdb7b25d46, type: 2}
@@ -2237,6 +2255,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1823660913}
     m_Modifications:
+    - target: {fileID: 11400000, guid: 8b054060924de874fb6bb3bdb7b25d46, type: 2}
+      propertyPath: conversationPieces.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8b054060924de874fb6bb3bdb7b25d46, type: 2}
       propertyPath: m_LocalPosition.x
       value: 2.69956589
@@ -2289,6 +2311,10 @@ Prefab:
     - target: {fileID: 400000, guid: 8b054060924de874fb6bb3bdb7b25d46, type: 2}
       propertyPath: m_LocalScale.y
       value: .404287905
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8b054060924de874fb6bb3bdb7b25d46, type: 2}
+      propertyPath: conversationPieces.Array.data[0]
+      value: I'm so proud of everything you've accomplised.
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5000000, guid: 8b054060924de874fb6bb3bdb7b25d46, type: 2}

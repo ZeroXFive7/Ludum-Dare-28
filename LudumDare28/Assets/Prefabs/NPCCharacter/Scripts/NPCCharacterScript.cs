@@ -7,17 +7,13 @@ public class NPCCharacterScript : MonoBehaviour {
     public float objectDrag = 25.0f;
     private Vector2 movement;
     private bool inConversation = false;
-    private ArrayList conversationPieces = new ArrayList();
+    public string[] conversationPieces;
     public bool useCustomColliderBox = false;
     private int conversationPlace = -1; // so it's incremented to the beginning of the conversation at first.
 
     // Use this for initialization
     void Start()
     {
-        conversationPieces.Add("Hello, I'm an NPC");
-        conversationPieces.Add("I think Max, Jake, and Josh are awesome!");
-        conversationPieces.Add("I also hate people. Go away!");
-
         if (!useCustomColliderBox)
         {
             Vector3 actualSize = getActualSize();
@@ -63,17 +59,12 @@ public class NPCCharacterScript : MonoBehaviour {
         }
     }
 
-    public void setConversation(ArrayList conversation)
-    {
-        conversationPieces = conversation;
-    }
-
     public void continueConversation()
     {
         inConversation = true;
         conversationPlace++;
 
-        if (conversationPlace >= conversationPieces.Count)
+        if (conversationPlace >= conversationPieces.Length)
         {
             leaveConversation();
         }
