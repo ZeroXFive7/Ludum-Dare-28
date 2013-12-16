@@ -4,6 +4,7 @@ using System.Collections;
 [RequireComponent(typeof(SpriteRenderer))]
 public class OcclusionTransparency : MonoBehaviour
 {
+    public float AlphaAmount = 0.4f;
     public bool IsChainable = false;
     public bool IsTransparent = false;
 

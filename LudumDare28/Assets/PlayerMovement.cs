@@ -35,6 +35,30 @@ public class PlayerMovement : MonoBehaviour
         HideOccluders();
     }
 
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.tag == "DoorTrigger")
+        {
+            DoorScript door = FindDoor(collider.gameObject);
+            if (door != null)
+            {
+                door.Open();
+            }
+        }
+    }
+
+    void OnTriggerExit(Collider collider)
+    {
+        if (collider.tag == "DoorTrigger")
+        {
+            DoorScript door = FindDoor(collider.gameObject);
+            if (door != null)
+            {
+                door.Close();
+            }
+        }
+    }
+
     private void GetInput()
     {
         input = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
@@ -94,7 +118,8 @@ public class PlayerMovement : MonoBehaviour
                 for (int i = 0; i < parent.childCount; ++i)
                 {
                     GameObject child = parent.GetChild(i).gameObject;
-                    if (child == result.transform.gameObject || child.GetComponent<OcclusionTransparency>().IsChainable)
+                    OcclusionTransparency occlusion = child.GetComponent<OcclusionTransparency>();
+                    if (child == result.transform.gameObject || occlusion != null && occlusion.IsChainable)
                     {
                         SetTransparency(parent.GetChild(i).gameObject);
                     }
@@ -115,9 +140,24 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        Color oldColor = occluder.color;
-        occluder.color = new Color(oldColor.r, oldColor.g, oldColor.b, 0.4f);
+        OcclusionTransparency config = gameObject.GetComponent<OcclusionTransparency>();
 
-        occluder.gameObject.GetComponent<OcclusionTransparency>().IsTransparent = true;
+        Color oldColor = occluder.color;
+        occluder.color = new Color(oldColor.r, oldColor.g, oldColor.b, config.AlphaAmount);
+
+        config.IsTransparent = true;
+    }
+
+    private DoorScript FindDoor(GameObject doorCollider)
+    {
+        for (int i = 0; i < doorCollider.transform.parent.childCount; ++i)
+        {
+            GameObject child = doorCollider.transform.parent.GetChild(i).gameObject;
+            if (child.tag == "Door")
+            {
+                return child.GetComponent<DoorScript>();
+            }
+        }
+        return null;
     }
 }

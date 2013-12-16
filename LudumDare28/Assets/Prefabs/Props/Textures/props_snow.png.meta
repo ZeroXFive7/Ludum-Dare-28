@@ -53,16 +53,16 @@ TextureImporter:
         width: 344
         height: 759
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: props_snow_1
       rect:
         serializedVersion: 2
-        x: 520
-        y: 2013
-        width: 642
-        height: 759
+        x: 521
+        y: 2016
+        width: 319
+        height: 756
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: props_snow_2
       rect:
         serializedVersion: 2
@@ -71,7 +71,7 @@ TextureImporter:
         width: 667
         height: 1573
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: props_snow_3
       rect:
         serializedVersion: 2
@@ -80,7 +80,7 @@ TextureImporter:
         width: 875
         height: 1383
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: props_snow_4
       rect:
         serializedVersion: 2
@@ -89,7 +89,7 @@ TextureImporter:
         width: 612
         height: 1709
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: props_snow_5
       rect:
         serializedVersion: 2
@@ -98,7 +98,7 @@ TextureImporter:
         width: 375
         height: 592
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: props_snow_6
       rect:
         serializedVersion: 2
@@ -107,7 +107,7 @@ TextureImporter:
         width: 298
         height: 498
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: props_snow_7
       rect:
         serializedVersion: 2
@@ -116,7 +116,7 @@ TextureImporter:
         width: 344
         height: 428
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: props_snow_8
       rect:
         serializedVersion: 2
@@ -125,7 +125,7 @@ TextureImporter:
         width: 344
         height: 428
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: props_snow_9
       rect:
         serializedVersion: 2
@@ -134,7 +134,7 @@ TextureImporter:
         width: 266
         height: 1729
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: props_snow_10
       rect:
         serializedVersion: 2
@@ -143,7 +143,7 @@ TextureImporter:
         width: 522
         height: 408
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: props_snow_11
       rect:
         serializedVersion: 2
@@ -152,7 +152,7 @@ TextureImporter:
         width: 304
         height: 916
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: props_snow_12
       rect:
         serializedVersion: 2
@@ -161,7 +161,7 @@ TextureImporter:
         width: 1677
         height: 637
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: props_snow_13
       rect:
         serializedVersion: 2
@@ -170,7 +170,7 @@ TextureImporter:
         width: 764
         height: 618
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: props_snow_14
       rect:
         serializedVersion: 2
@@ -179,6 +179,15 @@ TextureImporter:
         width: 940
         height: 617
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
+    - name: props_snow_15
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 2016
+        width: 319
+        height: 756
+      alignment: 0
+      pivot: {x: .5, y: .5}
   spritePackingTag: 
   userData: 
