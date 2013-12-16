@@ -1,0 +1,184 @@
+fileFormatVersion: 2
+guid: 8746f3a0138d7184a9f0aed8dfb1d316
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: props_snow_0
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 2013
+        width: 344
+        height: 759
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: props_snow_1
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 2013
+        width: 642
+        height: 759
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: props_snow_2
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 1097
+        width: 667
+        height: 1573
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: props_snow_3
+      rect:
+        serializedVersion: 2
+        x: 2177
+        y: 1068
+        width: 875
+        height: 1383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: props_snow_4
+      rect:
+        serializedVersion: 2
+        x: 3212
+        y: 1063
+        width: 612
+        height: 1709
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: props_snow_5
+      rect:
+        serializedVersion: 2
+        x: 3996
+        y: 2108
+        width: 375
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: props_snow_6
+      rect:
+        serializedVersion: 2
+        x: 4645
+        y: 2197
+        width: 298
+        height: 498
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: props_snow_7
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1316
+        width: 344
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: props_snow_8
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 1316
+        width: 344
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: props_snow_9
+      rect:
+        serializedVersion: 2
+        x: 4829
+        y: 0
+        width: 266
+        height: 1729
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: props_snow_10
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 734
+        width: 522
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: props_snow_11
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 22
+        width: 304
+        height: 916
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: props_snow_12
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 132
+        width: 1677
+        height: 637
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: props_snow_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 17
+        width: 764
+        height: 618
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: props_snow_14
+      rect:
+        serializedVersion: 2
+        x: 3625
+        y: 82
+        width: 940
+        height: 617
+      alignment: 0
+      pivot: {x: 0, y: 0}
+  spritePackingTag: 
+  userData: 
