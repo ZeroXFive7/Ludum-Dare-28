@@ -7,6 +7,7 @@ public class ShadowScript : MonoBehaviour
     private SpriteRenderer shadowRenderer;
 
     private Vector2 defaultScale;
+    private BoxCollider2D parentCollider;
 
 	// Use this for initialization
 	void Start()
@@ -14,9 +15,8 @@ public class ShadowScript : MonoBehaviour
         dayNightSystem = FindObjectOfType<DayNightScript>() as DayNightScript;
         shadowRenderer = gameObject.GetComponent<SpriteRenderer>() as SpriteRenderer;
 
-        Vector2 parentColliderSize = transform.parent.gameObject.GetComponent<BoxCollider2D>().size;
-        transform.position -= new Vector3(0.0f, 0.5f * parentColliderSize.y, 0.0f);
-        defaultScale = new Vector3(parentColliderSize.x, parentColliderSize.y / 2.0f, 1.0f);
+        parentCollider = transform.parent.gameObject.GetComponent<BoxCollider2D>();
+        defaultScale = new Vector3(parentCollider.size.x, parentCollider.size.y / 2.0f, 1.0f);
 	}
 	
 	// Update is called once per frame
@@ -26,16 +26,9 @@ public class ShadowScript : MonoBehaviour
         Debug.Log(sunDirection);
 
         float dot = Vector2.Dot(sunDirection, Vector2.up);
-        transform.position = new Vector3(sunDirection.x / 2.0f, transform.position.y, 0.0f);
-        transform.localScale = defaultScale + new Vector2(1.0f - dot, 0.0f);
+        transform.localPosition = new Vector3(sunDirection.x * 0.3f, parentCollider.center.y - parentCollider.size.y / 2.0f, 0.0f);
+        transform.localScale = defaultScale + new Vector2((1.0f - dot) / 2.0f, 0.0f);
 
-        if (dot < 0.0f)
-        {
-            shadowRenderer.enabled = false;
-        }
-        else
-        {
-            shadowRenderer.enabled = true;
-        }
+        shadowRenderer.color = new Color(1.0f, 1.0f, 1.0f, dot);
 	}
 }

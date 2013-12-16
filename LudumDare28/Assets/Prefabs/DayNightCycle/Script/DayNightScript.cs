@@ -68,7 +68,7 @@ public class DayNightScript : MonoBehaviour
         times[3] = EveningTime;
         times[4] = NightTime;
         times[5] = MidnightTime;
-        times[5] = 1.0f;
+        times[6] = 1.0f;
 
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 	}
@@ -93,6 +93,8 @@ public class DayNightScript : MonoBehaviour
         {
             timeIndex++;
         }
+
+        Debug.Log(timeIndex);
 
         float timeOfDayFraction = (timeOfDay - times[timeIndex]) / (times[timeIndex + 1] - times[timeIndex]);
         Color currentOverlay = timeOfDayFraction * colors[timeIndex + 1] + (1.0f - timeOfDayFraction) * colors[timeIndex];
