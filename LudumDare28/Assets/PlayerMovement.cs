@@ -40,9 +40,16 @@ public class PlayerMovement : MonoBehaviour
         if (collider.tag == "DoorTrigger")
         {
             DoorScript door = FindDoor(collider.gameObject);
-            if (door != null)
+            if (door == null)
             {
-                door.Open();
+                return;
+            }
+
+            door.Open();
+
+            if (door.TeleporterDestination != null)
+            {
+                transform.position = door.TeleporterDestination.transform.position;
             }
         }
     }

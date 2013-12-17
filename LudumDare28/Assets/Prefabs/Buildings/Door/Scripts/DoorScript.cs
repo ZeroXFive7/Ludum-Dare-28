@@ -3,6 +3,8 @@ using System.Collections;
 
 public class DoorScript : MonoBehaviour 
 {
+    public GameObject TeleporterDestination = null;
+
     private Animator animator;
 
 	void Start() 
@@ -12,11 +14,17 @@ public class DoorScript : MonoBehaviour
 
     public void Open()
     {
-        animator.Play(gameObject.name + "_open");
+        if (animator != null)
+        {
+            animator.Play(gameObject.name + "_open");
+        }
     }
 
     public void Close()
     {
-        animator.Play(gameObject.name + "_closed");
+        if (animator != null)
+        {
+            animator.Play(gameObject.name + "_closed");
+        }
     }
 }
